@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dot Matrix PDF Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Dot Matrix PDF Converter</h1>
+        <input type="file" id="txtFile" accept=".txt">
+        <label for="cpiSelect">Select Orientation</label>
+        <select id="cpiSelect">
+            <option value="17">Portrait</option>
+            <option value="10">Landscape</option>
+        </select>
+        <button id="generateBtn">Generate PDF</button>
+        <div id="statusText"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "name": "dot-matrix-converter",
+  "version": "1.0.0",
+  "description": "Convert .txt to PDF using Electron",
+  "author": "ITG-Dev",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "electron": "^24.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+  "appId": "com.ptc.dotmatrixconverter",
+  "productName": "Dot Matrix PDF Converter",
+  "directories": {
+    "buildResources": "assets",
+    "output": "dist"
+  },
+  "files": [
+    "**/*",
+    "!dist",
+    "!node_modules/.cache"
+  ],
+  "mac": {
+    "icon": "assets/logo.icns",
+    "target": "dmg"
+  },
+  "win": {
+    "icon": "assets/logo.ico",
+    "target": "nsis"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true
+  }
+}
+}
